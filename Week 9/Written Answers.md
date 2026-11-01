@@ -51,3 +51,41 @@ A node can be pushed by different neighbours before it is visited because nodes 
 
 **2. Compare the BFS order and the DFS order on Graph 1. Which data structure explains the difference?**
 BFS uses a queue (FIFO) and visits nodes level by level. DFS uses a stack (LIFO) and explores as deeply as possible before backtracking. The different data structures produce different traversal orders.
+
+#
+## Task 3: Dijkstra's Algorithm
+
+###  Hand trace on Dijkstra's Algorithm Graph
+
+| Step | Node settled (its dist) | Updates made (node = new dist via previous node) |
+|---|---|---|
+| Init | - | A=0, others=INF |
+| 1 | A (0) | B=4 via A, C=2 via A |
+| 2 | C (2) | B=3 via C, D=10 via C, E=12 via C |
+| 3 | B (3) | D=8 via B |
+| 4 | D (8) | E=10 via D, F=14 via D |
+| 5 | E (10) | F=13 via E |
+| 6 | F (13) | no updates |
+
+**Final distances and previous nodes**
+
+| Node | A | B | C | D | E | F |
+|---|---|---|
+| Final dist | - | A=0, others=INF |
+| Final prev | A (0) | B=4 via A, C=2 via A |
+
+### Short Answers
+
+**1. Explain relaxation with one line of your table (for example, why B changes from 4 to 3).**
+When settling C, the distance to B changes from 4 to 3 because the path A → C → B costs 2 + 1 = 3, which is cheaper than the previous path A → B with cost 4.
+
+**2. Why does Dijkstra give wrong results when an edge has a negative weight? How is BFS related to Dijkstra when every weight is 1?**
+Dijkstra assumes that once a node is settled, its shortest distance is final. A negative edge could later produce a cheaper path to an already settled node, violating this assumption.
+When every edge has weight 1, the cheapest path is the path with the fewest edges. BFS finds these paths, so BFS and Dijkstra produce the same shortest-path distances in this case.
+
+
+
+
+
+
+
