@@ -70,14 +70,14 @@ BFS uses a queue (FIFO) and visits nodes level by level. DFS uses a stack (LIFO)
 **Final distances and previous nodes**
 
 | Node | A | B | C | D | E | F |
-|---|---|---|
-| Final dist | - | A=0, others=INF |
-| Final prev | A (0) | B=4 via A, C=2 via A |
+|---|---|---|---|---|---|---|
+| Final dist | 0 | 3 | 2 | 8 | 10 | 13 |
+| Final prev | - | C | A | B | D | E |
 
 ### Short Answers
 
 **1. Explain relaxation with one line of your table (for example, why B changes from 4 to 3).**
-When settling C, the distance to B changes from 4 to 3 because the path A → C → B costs 2 + 1 = 3, which is cheaper than the previous path A → B with cost 4.
+When settling C, the distance to B changes from 4 to 3 because the path A -> C -> B costs 2 + 1 = 3, which is cheaper than the previous path A -> B with cost 4.
 
 **2. Why does Dijkstra give wrong results when an edge has a negative weight? How is BFS related to Dijkstra when every weight is 1?**
 Dijkstra assumes that once a node is settled, its shortest distance is final. A negative edge could later produce a cheaper path to an already settled node, violating this assumption.
