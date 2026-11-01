@@ -25,6 +25,7 @@ Marking a node when it is enqueued prevents duplicate entries in the queue and e
 **2. What is BFS complexity? Why does it fail on weighted graphs?**
 BFS runs in O(V+E) time. It finds paths with the fewest edges, not the lowest total weight, so it does not necessarily find the cheapest path in a weighted graph.
 
+#
 ## Task 2: DFS
 
 ###  Hand trace on DFS Graph
