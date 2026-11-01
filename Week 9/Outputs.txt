@@ -1,10 +1,13 @@
 # Outputs
 ## Task 1 Output
-
+BFS order from A: A B C D E F G
+Shortest A -> G: distance 3, path A -> C -> F -> G
+Shortest D -> G: distance 4, path D -> B -> E -> F -> G
 
 #
 ## Task 2 Output
-
+DFS order from A: A B D E F C G
+DFS order from G: G F C A B D E
 
 #
 ## Task 3 Output
